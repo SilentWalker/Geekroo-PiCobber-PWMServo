@@ -13,11 +13,11 @@ pwm = PWM(0x6F, debug=True)
 
 #servoMin = 150  # Min pulse length out of 4096
 #servoMax = 600  # Max pulse length out of 4096
-#默认频率是60Hz
+#default freq is 60Hz
 freq = 60
-#如果传入了新的频率, 则使用指定数值
+#use passed value
 if sys.argv[1]:
-  freq =  sys.argv[1]
+  freq =  int(sys.argv[1])
 
 pwm.setPWMFreq(freq)                        # Set frequency to 60 Hz
 
